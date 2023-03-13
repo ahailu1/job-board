@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+.hello {
+
+    box-shadow:  0 0 3px 0 gray;
+
+}
