@@ -29,16 +29,26 @@ let ReturnFormSection = () => {
 }
 
 
+
     return (
         
-        <div className="flex container grid-row-1">
+        <div className="container m-0 p-5 my-2 flex justify-center">
+            <div className="bg-dark rounded grid grid-row-1 grid-cols-2">
+          
+            <div className = "p-4">
             <ReturnFormSection/>
-            <div className = "container grid-row-5 border bg-black">
+            </div>
+
+            <div className = "grid grid-cols-1 border bg-black">
                 <div>Hello World</div>
-                <div></div>
-                <div></div>
+            </div>
+
+
 
             </div>
+          
+            
+         
             </div>
 
         )
