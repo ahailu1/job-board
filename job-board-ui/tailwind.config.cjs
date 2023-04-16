@@ -6,7 +6,6 @@ module.exports = {
       light: '#cbd5e1',
       dark: '#1e293b',
       white: '#FFFFFF',
-      primary: '#gsafgfsg',
     }
   },
   plugins: [],

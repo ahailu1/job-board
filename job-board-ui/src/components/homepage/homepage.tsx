@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import Login from './login-form';
 import CreateAccount from './create-account';
+import { useForm, Resolver } from 'react-hook-form';
+import './styles/forms.css';
 
 const DisplayHomePage = () => {
 
@@ -32,23 +34,39 @@ let ReturnFormSection = () => {
 
     return (
         
-        <div className="container m-0 p-5 my-2 flex justify-center">
-            <div className="bg-dark rounded grid grid-row-1 grid-cols-2">
+        <div className="container w-full max-w-full my-10">
+            <div className="grid grid-cols-2 gap-6">
           
-            <div className = "p-4">
+            <div className = "p-4 bg-dark rounded-r">
             <ReturnFormSection/>
             </div>
 
-            <div className = "grid grid-cols-1 border bg-black">
-                <div>Hello World</div>
+            <div className = "grid grid-row-3">
+            <div>Hello World</div>       
+                <div className="">
+                <form className = "grid grid-row-2">
+                    <div className="grid grid-cols-2">                        
+                    <div className="flex items-center">
+                    <div className="p-2">
+                    <label className="font-bold text-lg" htmlFor = "search_bar">Job</label>
+                    </div>
+                    <div className="flex grow">
+                    <input name = "search_bar" type = "text" className = "p-3 border rounded grow shadow-sm text-sm" placeholder="Search Job"/>
+                    </div>
+                </div>
+                <div className="flex flex-center items-center">
+                    <div className="p-2">
+                    <label className="font-bold text-lg" htmlFor = "search_bar">Location</label>
+                    </div>
+                    <div className="flex grow">
+                    <input className="p-3 border rounded shadow-sm text-sm grow" type = "text" placeholder="Enter city, province, or town"/>
+                    </div>
+                </div>
+                    </div>           
+                </form>
+                </div>
             </div>
-
-
-
-            </div>
-          
-            
-         
+            </div>     
             </div>
 
         )

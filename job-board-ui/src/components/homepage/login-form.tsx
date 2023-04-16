@@ -6,6 +6,7 @@ const Login : React.FC<React.PropsWithChildren<CreateAccountProps>> = ({togglePa
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         
+        console.log("hello world");
     }
 
 return (

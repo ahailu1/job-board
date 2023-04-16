@@ -1,4 +1,14 @@
-{
+{ "rules" : {
+  "no-unused-vars" : "off",
+  "@typescript-eslint/no-unused-vars" : "warn",
+  "@typescript-eslint/no-unnecessary-type-assertion" : "warn",
+  "@typescript-eslint/no-empty-function" : "warn",
+  "@typescript-eslint/require-await" : "warn",
+  "@typescript-eslint/no-unsafe-call" : "warn",
+  "@typescript-eslint/no-unsafe-member-access" : "warn",
+  "prefer-const" : "off",
+  "@typescript-eslint/prefer-const" : "warn",
+},
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -14,8 +24,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
   },
-  "include": ["src"],
+  "include": ["src", "vite.config.ts", ".eslintrc.cjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
