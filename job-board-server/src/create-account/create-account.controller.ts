@@ -4,13 +4,14 @@ import { Request } from 'express'
 import { CreateAccountService } from './create-account.service';
 import { CreateAccountDto } from './dto/create-account.dto';
 import { CreateAccountInterface } from './interfaces/create-account.interface';
-@Controller('create_account')
+import { CreateAccountPipe } from './pipes/create-account.pipe';
+@Controller('create-account')
 export class CreateAccount {
     constructor(private createUserService : CreateAccountService ) {
 
     }
     @Post()
-    testt(@Body() createAccountDto : CreateAccountDto) {
+    testt(@Body(new CreateAccountPipe()) createAccountDto : CreateAccountDto) {
         this.createUserService.createAccount(createAccountDto)
     }
     

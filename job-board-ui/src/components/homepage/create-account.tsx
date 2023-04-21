@@ -31,7 +31,7 @@ const CreateAccount : React.FC<React.PropsWithChildren<CreateAccountProps>> = ({
         const {username, password, confirmPassword} = data;
 
 try {
-       let submitUser = await axios.post('http://localhost:3000/create_account', {
+       let submitUser = await axios.post('http://localhost:3000/create-account', {
             username : username,
             password: password,
             confirmPassword: confirmPassword,
