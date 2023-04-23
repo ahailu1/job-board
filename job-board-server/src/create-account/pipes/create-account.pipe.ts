@@ -19,6 +19,7 @@ async transform(value: any, { metatype }: ArgumentMetadata) {
     const errors = await validate(object);
     if (errors.length > 0) {
         console.log(errors);
+        console.log('hello world');
       throw new HttpException('forbidden', HttpStatus.FORBIDDEN);
     } else {
         console.log('nope');
