@@ -45,7 +45,7 @@ let ReturnFormSection = () => {
                     <h1 className="text-dark text-base font-normal">Here you can post job listings if you are an employee looking for candidates, or look for jobs if you are a job seeker.</h1>
                     </div>
                     <div className="grid grid-cols-2">
-                    <div>
+                    <div className="py-4">
                         <button className="rounded text-white bg-dark">Create Account</button>
                     </div>
                     <div className="grid grid-rows-2">
