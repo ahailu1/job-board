@@ -36,19 +36,26 @@ let ReturnFormSection = () => {
         
         <div className="container w-full max-w-full my-10">
             <div className="grid grid-cols-2 gap-6">
-          
-            <div className = "p-4 bg-dark rounded-r">
-            <ReturnFormSection/>
+
+            <div className = "p-4 bg-white grid grid-rows-2">
+                    <div className="py-3">
+                    <h1 className="text-dark font-bold">Welcome to Job Board</h1>
+
+                    </div>
+                    <div className="py-5">
+                    <h1 className="text-dark text-base font-normal">Here you can post job listings if you are an employee looking for candidates, or look for jobs if you are a job seeker.</h1>
+
+                    </div>
             </div>
 
-            <div className = "grid grid-row-3">
+            <div className = "grid grid-row-3 bg-dark rounded py-5">
             <div>Hello World</div>       
                 <div className="">
                 <form className = "grid grid-row-2">
                     <div className="grid grid-cols-2">                        
                     <div className="flex items-center">
                     <div className="p-2">
-                    <label className="font-bold text-lg" htmlFor = "search_bar">Job</label>
+                    <label className="font-bold text-lg text-white" htmlFor = "search_bar">Job</label>
                     </div>
                     <div className="flex grow">
                     <input name = "search_bar" type = "text" className = "p-3 border rounded grow shadow-sm text-sm" placeholder="Search Job"/>
@@ -56,7 +63,7 @@ let ReturnFormSection = () => {
                 </div>
                 <div className="flex flex-center items-center">
                     <div className="p-2">
-                    <label className="font-bold text-lg" htmlFor = "search_bar">Location</label>
+                    <label className="font-bold text-lg text-white" htmlFor = "search_bar">Location</label>
                     </div>
                     <div className="flex grow">
                     <input className="p-3 border rounded shadow-sm text-sm grow" type = "text" placeholder="Enter city, province, or town"/>
