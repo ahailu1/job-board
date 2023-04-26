@@ -37,21 +37,34 @@ let ReturnFormSection = () => {
         <div className="container w-full max-w-full my-10">
             <div className="grid grid-cols-2 gap-6">
 
-            <div className = "p-4 bg-white grid grid-rows-2">
+            <div className = "p-10 bg-white grid grid-rows-3">
                     <div className="py-3">
-                    <h1 className="text-dark font-bold">Welcome to Job Board</h1>
-
+                    <h1 className="text-dark font-bold">Find a Job. Post A Job</h1>
                     </div>
                     <div className="py-5">
                     <h1 className="text-dark text-base font-normal">Here you can post job listings if you are an employee looking for candidates, or look for jobs if you are a job seeker.</h1>
+                    </div>
+                    <div className="grid grid-cols-2">
+                    <div>
+                        <button className="rounded text-white bg-dark">Create Account</button>
+                    </div>
+                    <div className="grid grid-rows-2">
+                        <div className="py-4">
+                        <button className="rounded text-white bg-dark">Sign In</button>
+                        </div>
+                        <div className="py-4">
+                        <button className="rounded text-white bg-dark">Sign In with Google</button>
+                        </div>
+                    </div>
+
 
                     </div>
             </div>
 
-            <div className = "grid grid-row-3 bg-dark rounded py-5">
-            <div>Hello World</div>       
+            <div className = "grid grid-rows-2 bg-dark rounded py-5">
+            <div className="text-white font-bold text-center text-5xl">Find Your Job</div>       
                 <div className="">
-                <form className = "grid grid-row-2">
+                <form className = "grid grid-rows-2">
                     <div className="grid grid-cols-2">                        
                     <div className="flex items-center">
                     <div className="p-2">
