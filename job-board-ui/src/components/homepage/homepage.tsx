@@ -6,31 +6,6 @@ import './styles/forms.css';
 
 const DisplayHomePage = () => {
 
-const [formType, setFormType] = useState('create');
-
-const setCreateAccountPage = (type : string) : void => {
-    if(type == 'create') {
-        setFormType('login');
-    } else {
-
-        setFormType('create');
-    }
-}
-
-
-let ReturnFormSection = () => {
-    if(formType == 'create') {
-        return (
-        <CreateAccount formType = {formType} togglePage = {setCreateAccountPage} />
-        )
-    } else {
-        return (
-                <Login togglePage = {setCreateAccountPage} formType = {formType} />
-            )
-    }
-}
-
-
 
     return (
         

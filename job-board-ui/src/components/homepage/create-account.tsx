@@ -7,12 +7,12 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import * as yup from "yup";
 
-const CreateAccount : React.FC<React.PropsWithChildren<CreateAccountProps>> = ({togglePage, formType} : CreateAccountProps) => {
+const CreateAccount = () => {
 
     const formInputs = yup.object().shape({
         username: yup.string().min(8).required(),
         password: yup.string().min(8).required(),
-        confirmPassword : yup.string().min(8, 'Must be at least 8 characters').required().oneOf([yup.ref('password'), null],'Passwords must Match'),
+        confirmPassword : yup.string().min(8, 'Must be at least 8 characters').required().oneOf([yup.ref('password')],'Passwords must Match'),
       }).required();
 
 
@@ -80,7 +80,6 @@ try {
                  
                     <div className='flex justify-between'>
                         <div className=''><button className='bg-slate-900 text-dark'>Create</button></div>
-                        <div><button onClick={() => togglePage(formType)} className='bg-neutral-300'>Sign In</button></div>                   
                     </div>
               
                 </div>              
