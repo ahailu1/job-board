@@ -5,7 +5,7 @@ const DisplayNavBar = () => {
 
 
     return (
-        <div className = "w-100 bg-light py-5">
+        <div className = "w-100 bg-dark py-5">
             <div className='grid grid-cols-2'>
             <div className = "flex">
             <div><a className='p-5' href = ""> Home </a></div>

@@ -9,6 +9,7 @@ import { BrowserRouter, Route, RouterProvider, Link, createBrowserRouter, create
 function App() {
   return (
     <div className='container w-full max-w-full m-0'>
+      <DisplayNavBar/>
    <AppRouter/>
     </div>
   )
