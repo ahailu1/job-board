@@ -11,7 +11,7 @@ export class CreateAccount {
 
     }
     @Post()
-    testt(@Body(new CreateAccountPipe()) createAccountDto : CreateAccountDto) {
+    createAccount(@Body(new CreateAccountPipe()) createAccountDto : CreateAccountDto) {
         this.createUserService.createAccount(createAccountDto)
     }
     

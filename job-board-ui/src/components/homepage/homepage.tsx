@@ -1,13 +1,33 @@
 import React, {useState} from "react";
 import Login from './login-form';
 import CreateAccount from './create-account';
-import { useForm, Resolver } from 'react-hook-form';
+import { useForm, Resolver, SubmitHandler } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { Link } from 'react-router-dom';
-
 import './styles/forms.css';
+import axios from "axios";
 
 const DisplayHomePage = () => {
 
+    type searchBarInput = {
+        searchInput : string;
+    }
+
+    const formInputs = yup.object().shape({
+    searchInput : yup.string().min(1).required()
+    });
+
+    const { register, handleSubmit, formState : { errors } } = useForm<searchBarInput> ({resolver : yupResolver(formInputs)})
+
+        const onSubmit : SubmitHandler<searchBarInput> = async (data) => {
+            
+            const {searchInput} = data;
+            try {
+                axios.get(`http://localhost:3000/`)
+            }
+
+        }
 
     return (
         
@@ -55,7 +75,7 @@ const DisplayHomePage = () => {
                     <label className="font-bold text-lg text-white" htmlFor = "search_bar">Job</label>
                     </div>
                     <div className="w-full">
-                    <input name = "search_bar" type = "text" className = "p-3 border rounded shadow-sm text-sm w-full" placeholder="Search Job"/>
+                    <input {...register("searchInput")} type = "text" className = "p-3 border rounded shadow-sm text-sm w-full" placeholder="Search Job"/>
                     </div>
                 </div>
                 <div className="flex flex-center flex-col items-start p-3">
