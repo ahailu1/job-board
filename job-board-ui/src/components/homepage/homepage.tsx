@@ -24,7 +24,13 @@ const DisplayHomePage = () => {
             
             const {searchInput} = data;
             try {
-                axios.get(`http://localhost:3000/`)
+                let getStockInfo = await axios.get(`http://localhost:3000/fetch-stock?id=${searchInput}`);
+                
+            console.log('alex story');
+
+                console.log(getStockInfo);
+            } catch (e) {
+                throw new Error(e);
             }
 
         }
@@ -68,7 +74,7 @@ const DisplayHomePage = () => {
             <div className = "grid grid-rows-2 rounded py-5">
             <div className="text-white font-bold text-center text-5xl">Find Your Job</div>       
                 <div className="">
-                <form className = "grid grid-rows-2">
+                <form className = "grid grid-rows-2" name='request_stock_form' onSubmit = { handleSubmit(onSubmit) }>
                     <div className="grid grid-cols-2 ">                        
                     <div className="flex items-start flex-col p-3">
                     <div className="p-2">
@@ -78,15 +84,8 @@ const DisplayHomePage = () => {
                     <input {...register("searchInput")} type = "text" className = "p-3 border rounded shadow-sm text-sm w-full" placeholder="Search Job"/>
                     </div>
                 </div>
-                <div className="flex flex-center flex-col items-start p-3">
-                    <div className="p-2 flex grow">
-                    <label className="font-bold text-lg text-white" htmlFor = "search_bar">Location</label>
-                    </div>
-                    <div className="w-full">
-                    <input className="p-3 rounded shadow-sm text-sm w-full" type = "text" placeholder="Enter city, province, or town"/>
-                    </div>
-                </div>
-                    </div>           
+                    <button type = "submit">Search</button>
+                    </div>        
                 </form>
                 </div>
             </div>

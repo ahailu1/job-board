@@ -1,12 +1,18 @@
-import { Controller, Get, Injectable } from "@nestjs/common";
+import { Controller, Get, Injectable, Param, Query } from "@nestjs/common";
 import { FetchStockService } from "./fetch-stock.service";
-@Controller('fetch-stock-request')
-export class FetchStockRequest {
+@Controller('fetch-stock')
+export class FetchStockController {
         constructor(private fetchStockService : FetchStockService ) {
 
         }
-        @Get('fetch-stock:id')
-        requestStockPrice() {
-                console.log('here');
+        @Get()
+        requestStockPrice(@Query('id') query: any) : string {
+                //validate id;;
+
+
+                let stockInfo = this.fetchStockService.getStockPrice(query);
+                console.log('qqq');
+                console.log(query);
+                return 'hello there';
         }
 }
